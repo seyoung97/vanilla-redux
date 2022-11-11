@@ -9,6 +9,7 @@ export const addToDo = (text) => {
     text,
   };
 };
+
 export const deleteToDo = (id) => {
   return {
     type: DELETE,
@@ -16,7 +17,7 @@ export const deleteToDo = (id) => {
   };
 };
 
-const reducer = (state = [], action) => {
+const reducer = (state = ["Hello"], action) => {
   switch (action.type) {
     case ADD:
       return [{ text: action.text, id: Date.now() }, ...state];
